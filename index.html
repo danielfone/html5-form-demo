@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>HTML5 Form Demo</title>
+
+    <!-- Bootstrap core CSS -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+
+
+    <!-- Custom styles for this template -->
+    <link href="demo.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="container">
+
+      <div class="page-header">
+        <h1>HTML5 Form Demo</h1>
+        <p class="lead">New HTML5 form types with Bootstrap.</p>
+      </div>
+
+      <form class="form-horizontal" method="post">
+
+        <h3>Number</h3>
+        <div class="row">
+          <div class="col-md-3">
+            <input type="number" class="form-control">
+          </div>
+          <div class="col-md-4">
+            <code>&lt;input type=&quot;number&quot;&gt;</code>
+            <code>&lt;%= f.number_field :attr %&gt;</code>
+          </div>
+        </div>
+
+        <h3>Number (with pattern=)</h3>
+        <div class="row">
+          <div class="col-md-3">
+            <input type="number" pattern="[0-9]*" class="form-control">
+          </div>
+          <div class="col-md-4">
+            <code>&lt;input type=&quot;number&quot; pattern=&quot;[0-9]*&quot;&gt;</code>
+            <code>&lt;%= f.number_field :attr, pattern: &quot;[0-9]*&quot; %&gt;</code>
+          </div>
+        </div>
+
+        <h3>Email</h3>
+        <div class="row">
+          <div class="col-md-3">
+            <input type="email" class="form-control">
+          </div>
+          <div class="col-md-4">
+            <code>&lt;input type=&quot;email&quot;&gt;</code>
+            <code>&lt;%= f.email_field :attr %&gt;</code>
+          </div>
+        </div>
+
+        <div class="well well-sm">
+          <p>HTML5 input types give us improved:</p>
+          <ul>
+            <li>Validation (sometimes)</li>
+            <li>Input Affordance (sometimes)</li>
+          </ul>
+          <p>¯\_(ツ)_/¯</p>
+          <p>Right now, this is very helpful for a very small percent of users (depending on your userbase)</p>
+        </div>
+
+        <h3>Currency</h3>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="input-group">
+              <span class="input-group-addon">$</span>
+              <input class="form-control" step="0.01" type="number" value="9.99" style="text-align:right"/>
+              <span class="input-group-addon">/hour</span>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <code>&lt;input type=&quot;number&quot; step=&quot;0.01&quot;&gt;</code>
+            <code>&lt;%= f.number_field :attr, step: 0.01, prepend: &#x27;$&#x27;, append: &#x27;/hour&#x27; %&gt;</code>
+          </div>
+        </div>
+
+        <h3>Dates/Times</h3>
+        <div class="row">
+          <div class="col-md-3">
+            <input type="date" class="form-control">
+          </div>
+          <div class="col-md-4">
+            <code>&lt;input type=&quot;date&quot;&gt;</code>
+            <code>&lt;%= f.date_field :attr %&gt;</code>
+            <p>Submits as yyyy-mm-dd</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-3">
+            <input type="time" class="form-control">
+          </div>
+          <div class="col-md-4">
+            <code>&lt;input type=&quot;time&quot;&gt;</code>
+            <code>&lt;%= f.time_field :attr %&gt;</code>
+            <p>Submits as 23:55</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-3">
+            <input type="datetime-local" class="form-control">
+          </div>
+          <div class="col-md-4">
+            <code>&lt;input type=&quot;datetime-local&quot;&gt;</code>
+            <code>&lt;%= f.datetime_local_field :attr %&gt;</code>
+          </div>
+        </div>
+
+        <h3>Placeholder</h3>
+        <div class="row">
+          <div class="col-md-3">
+            <input type="email" class="form-control" placeholder="me@example.com">
+          </div>
+          <div class="col-md-4">
+            <code>&lt;input type=&quot;email&quot; placeholder=&quot;me@example.com&quot;&gt;</code>
+            <code>&lt;%= f.email_field :attr, placeholder: &quot;me@example.com&quot; %&gt;</code>
+          </div>
+        </div>
+
+        <h3>Browser Support</h3>
+        <ul>
+          <li><a href="http://www.wufoo.com/html5/">http://www.wufoo.com/html5/</a></li>
+          <li><a href="http://html5test.com/compare/browser/index.html">http://html5test.com/compare/browser/index.html</a></li>
+        </ul>
+
+        <h3>Rails Docs</h3>
+        <p>
+          <a href="http://api.rubyonrails.org/classes/ActionView/Helpers/FormTagHelper.html">http://api.rubyonrails.org/classes/ActionView/Helpers/FormTagHelper.html</a>
+        </p>
+
+        <p><input type="submit" value="Check" class="btn btn-primary"></p>
+      </form>
+
+
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
